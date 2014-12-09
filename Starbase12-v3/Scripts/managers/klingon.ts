@@ -19,7 +19,12 @@ module managers {
 
         // Create new enemy ships
         spawn() {
-            for (var count = 0; count < config.ENEMY_COUNT; count++) {
+            // Increase enemy number every 5 levels
+            if (gameLevel % 5 == 0) {
+                enemyLevel++;
+            }
+
+            for (var count = 0; count < (config.ENEMY_COUNT + enemyLevel); count++) {
                 enemies[count] = new objects.Enemy();
                 gameTile.getLocation(enemies[count]);
                 game.addChild(enemies[count]);

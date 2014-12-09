@@ -43,7 +43,7 @@
     export var PHOTON_NUM: number = 8;
     export var INTEGRITY: number = 100;
     export var ARC_COUNT: number = 4;
-    export var ENEMY_COUNT: number = 2;
+    export var ENEMY_COUNT: number = 1;
 
     // Colour Constants
     export var GREEN: string = "#0F0";
@@ -79,4 +79,8 @@
     export var PLAY_STATE: number = 1;
     export var GAME_OVER_STATE: number = 2;
     export var INSTRUCTION_STATE: number = 3;
+    export var MISSION_STATE: number = 4;
+    export var MOVEMENT_STATE: number = 5;
+    export var DEFENSES_STATE: number = 6;
+    export var WEAPONS_STATE: number = 7;
 }

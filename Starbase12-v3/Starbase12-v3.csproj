@@ -65,6 +65,7 @@
     <Content Include="assets\fonts\startrek.svg" />
     <Content Include="assets\images\atlas.png" />
     <Content Include="assets\images\backButton.png" />
+    <Content Include="assets\images\defensesScreen.jpg" />
     <Content Include="assets\images\explosion.png" />
     <Content Include="assets\images\flameParticle.png" />
     <Content Include="assets\images\gameOverScreen.png" />
@@ -81,6 +82,8 @@
     <Content Include="assets\images\klingonTopRight.png" />
     <Content Include="assets\images\menuScreen.png" />
     <Content Include="assets\images\explosionParticle.png" />
+    <Content Include="assets\images\missionScreen.jpg" />
+    <Content Include="assets\images\movementScreen.jpg" />
     <Content Include="assets\images\photon animation\photon1.png" />
     <Content Include="assets\images\photon animation\photon10.png" />
     <Content Include="assets\images\photon animation\photon11.png" />
@@ -149,6 +152,7 @@
     <Content Include="assets\images\startbaseTopRightYellow.png" />
     <Content Include="assets\images\startbaseYellow.png" />
     <Content Include="assets\images\startButton.png" />
+    <Content Include="assets\images\weaponsScreen.jpg" />
     <Content Include="assets\sounds\zero.mp3" />
     <Content Include="assets\sounds\1.mp3" />
     <Content Include="assets\sounds\2.mp3" />
@@ -242,6 +246,11 @@
     <TypeScriptCompile Include="Scripts\objects\starbase.ts" />
     <TypeScriptCompile Include="Scripts\libs\gamepad.d.ts" />
     <TypeScriptCompile Include="Scripts\states\gameover.ts" />
+    <TypeScriptCompile Include="Scripts\states\defenses.ts" />
+    <TypeScriptCompile Include="Scripts\states\weapons.ts" />
+    <TypeScriptCompile Include="Scripts\states\movement.ts" />
+    <TypeScriptCompile Include="Scripts\states\mission.ts" />
+    <TypeScriptCompile Include="Scripts\states\instructions.ts" />
     <TypeScriptCompile Include="Scripts\states\menu.ts" />
     <TypeScriptCompile Include="Scripts\states\play.ts" />
     <TypeScriptCompile Include="Scripts\utility\distance.ts" />

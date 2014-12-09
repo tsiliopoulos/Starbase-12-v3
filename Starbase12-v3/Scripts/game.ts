@@ -36,6 +36,11 @@
 /// <reference path="managers/collision.ts" />
 /// <reference path="states/gameover.ts" />
 /// <reference path="states/play.ts" />
+/// <reference path="states/mission.ts" />
+/// <reference path="states/movement.ts" />
+/// <reference path="states/defenses.ts" />
+/// <reference path="states/weapons.ts" />
+/// <reference path="states/instructions.ts" />
 /// <reference path="states/menu.ts" />
 
 var stage: createjs.Stage;
@@ -81,6 +86,7 @@ var startButton: objects.Button;
 
 // Game Level Variables
 var gameLevel:number = 1;
+var enemyLevel: number = 0;
 var levelUp: boolean = true;
 var starbaseAlive: boolean = true;
 var klingonsAlive: boolean = true;
@@ -186,7 +192,7 @@ function changeState(state: number): void {
     // Launch Various "screens"
     switch (state) {
         case config.MENU_STATE:
-            // instantiate menu screen
+            // instantiate the Game Menu screen
             currentStateFunction = states.MenuState;
             states.Menu();
             break;
@@ -204,9 +210,34 @@ function changeState(state: number): void {
             break;
 
         case config.INSTRUCTION_STATE:
-            /*currentStateFunction = states.InstructionState;
-            // instantiate game over screen
-            states.Instructions();*/
+            currentStateFunction = states.InstructionState;
+            // instantiate the Instruction Menu screen
+            states.Instructions();
+            break;
+
+        // SUB SELECTIONS OF THE INSTRUCTION STATE
+        case config.MISSION_STATE:
+            currentStateFunction = states.MissionState;
+            // instantiate the Mission Briefing screen
+            states.Mission();
+            break;
+
+        case config.MOVEMENT_STATE:
+            currentStateFunction = states.MovementState;
+            // instantiate the Instruction Menu screen
+            states.Movement();
+            break;
+
+        case config.DEFENSES_STATE:
+            currentStateFunction = states.DefensesState;
+            // instantiate the Instruction Menu screen
+            states.Defenses();
+            break;
+
+        case config.WEAPONS_STATE:
+            currentStateFunction = states.WeaponsState;
+            // instantiate the Instruction Menu screen
+            states.Weapons();
             break;
     }
 }

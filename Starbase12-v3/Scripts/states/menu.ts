@@ -4,7 +4,6 @@
 
     // Button Event Handlers
     export function instructionsButtonClicked(event: MouseEvent) {
-        menuSound.stop();
         stage.removeChild(game);
         game.removeAllChildren();
         game.removeAllEventListeners();
@@ -43,7 +42,7 @@
         // Menu Screen
         menuScreen = new createjs.Bitmap(managers.Assets.loader.getResult("menuScreen"));
         game.addChild(menuScreen);
-        menuScreen.alpha = 0.9;
+        menuScreen.alpha = 0.8;
 
         // Display Game Over
         gameNameLabel = new objects.Label(config.MIDDLE_X, config.MIDDLE_Y, "Starbase 12");
